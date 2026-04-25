@@ -49,8 +49,11 @@ with app.app_context():
 worker = threading.Thread(target=generate_report)
 worker.daemon = True
 worker.start()
+# Create tables when app starts
+with app.app_context():
+    db.create_all()
 
-
-@app.route("/")
-def home():
-    return "Agile Project Manager Backend Running 🚀"
+# Start background thread
+worker = threading.Thread(target=generate_report)
+worker.daemon = True
+worker.start()
