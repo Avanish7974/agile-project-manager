@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Agile Project Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 Agile Project Manager</h1>
+
+
+<!-- CREATE PROJECT -->
+<div class="create-project">
+
+<h2>Create Project</h2>
+
+<input type="text" id="name" placeholder="Project Name">
+<input type="text" id="description" placeholder="Description">
+
+<button onclick="createProject()">Create Project</button>
+
+</div>
+
+
+<!-- MAIN GRID -->
+<div class="main-grid">
+
+<!-- PROJECT LIST -->
+<div class="panel">
+
+<h2>Projects</h2>
+
+<ul id="projectList">
+<!-- Projects load here -->
+</ul>
+
+</div>
+
+
+<!-- PROJECT DETAILS -->
+<div class="panel" id="projectDetails">
+
+<h2>Project Details</h2>
+
+<p>Select a project to view stories</p>
+
+<!-- Stories and Tasks will load dynamically -->
+
+</div>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

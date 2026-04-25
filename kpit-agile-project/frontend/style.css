@@ -1,0 +1,173 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f1f5f9;
+margin:0;
+padding:0;
+}
+
+.container{
+width:90%;
+margin:auto;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* CREATE PROJECT BOX */
+
+.create-project{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
+
+/* INPUTS */
+
+input{
+padding:10px;
+margin:5px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+/* BUTTONS */
+
+button{
+padding:8px 15px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1e40af;
+}
+
+/* MAIN GRID */
+
+.main-grid{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:20px;
+}
+
+/* PANELS */
+
+.panel{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* LIST RESET */
+
+ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+/* PROJECT CARD */
+
+.projectCard{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+padding:12px;
+margin-bottom:12px;
+background:#f5f7ff;
+border-radius:8px;
+gap:10px;
+}
+
+.projectInfo{
+flex:1;
+}
+
+.projectInfo b{
+font-size:15px;
+}
+
+.projectInfo p{
+margin:4px 0 0 0;
+font-size:13px;
+color:#555;
+word-break:break-word;
+}
+
+.projectButtons{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.projectButtons button{
+width:70px;
+}
+
+/* STORY BLOCK */
+
+.story{
+background:#e2e8f0;
+padding:12px;
+margin-top:10px;
+border-radius:8px;
+}
+
+/* STORY HEADER */
+
+.storyHeader{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+
+/* TASK INPUT AREA */
+
+.taskInput{
+display:flex;
+gap:10px;
+margin-bottom:10px;
+}
+
+/* TASK ITEM */
+
+.task{
+display:flex;
+align-items:center;
+gap:10px;
+margin:6px 0;
+padding:8px;
+border-radius:6px;
+}
+
+/* TASK STATUS COLORS */
+
+.todo{
+background:#ffe8e8;
+}
+
+.progress{
+background:#fff4cc;
+}
+
+.done{
+background:#d6f5d6;
+}
+
+/* DROPDOWN */
+
+select{
+padding:5px;
+border-radius:4px;
+border:1px solid #ccc;
+}
