@@ -54,3 +54,7 @@ worker.start()
 @app.route("/")
 def home():
     return "Agile Project Manager Backend Running 🚀"
+
+
+# This line helps Gunicorn find the Flask app
+application = app
