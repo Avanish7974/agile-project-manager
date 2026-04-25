@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import threading
 import time
+import os
 
 app = Flask(__name__)
 
@@ -39,10 +40,16 @@ def generate_report():
             print("===========================\n")
 
 
+@app.route("/")
+def home():
+    return "Agile Project Manager Backend Running 🚀"
+
+
 if __name__ == "__main__":
 
     worker = threading.Thread(target=generate_report)
     worker.daemon = True
     worker.start()
 
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
