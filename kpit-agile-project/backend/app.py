@@ -40,21 +40,17 @@ def generate_report():
             print("===========================\n")
 
 
+# Create tables when app starts
+with app.app_context():
+    db.create_all()
+
+
+# Start background thread
+worker = threading.Thread(target=generate_report)
+worker.daemon = True
+worker.start()
 
 
 @app.route("/")
 def home():
     return "Agile Project Manager Backend Running 🚀"
-
-
-if __name__ == "__main__":
-
-    worker = threading.Thread(target=generate_report)
-    worker.daemon = True
-    worker.start()
-
-    with app.app_context():
-        db.create_all()
-
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
